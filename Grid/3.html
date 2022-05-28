@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outer{
+            display: grid;
+            width: 40%;
+            margin: auto;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(3,70px);
+            gap: 20px;
+            grid-template-areas: 
+            "a b b c"
+            "d d e f"
+            "g h i i"
+          
+        }
+        #outer>div:nth-child(1){
+           grid-area: a;
+       }
+       #outer>div:nth-child(2){
+           grid-area: b;
+       }
+       #outer>div:nth-child(3){
+           grid-area: c;
+       }
+       #outer>div:nth-child(4){
+           grid-area: d;
+       }
+       #outer>div:nth-child(5){
+           grid-area: e;
+       }
+       #outer>div:nth-child(6){
+           grid-area: f;
+       }
+       #outer>div:nth-child(7){
+           grid-area: g;
+       }
+       #outer>div:nth-child(8){
+           grid-area: h;
+       }
+       #outer>div:nth-child(9){
+           grid-area: i;
+       }
+        #outer>div{
+            background-color: grey;
+            border: 5px solid red;
+       }
+       
+         
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

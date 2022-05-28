@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outer{
+            width: 50%;
+            margin: auto;
+            display: grid;
+            text-align: center;
+        }
+        #outer>h1{
+            width: 60%;
+            margin: auto;
+        }
+        #outer>p{
+            width: 72%;
+            margin: auto;
+            margin-top: 20px;
+            color:rgb(148,148,148)
+
+        }
+        #inner{
+            display: grid;
+            margin: auto;
+            margin-top: 70px;
+            width: 60%;
+            text-align: center;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: auto;
+            gap: 20px;
+        }
+        #inner>div{
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            border-radius: 10px;
+           }
+        #inner>div>p:nth-child(1){
+            font-family: 'Times';font-size: 24px;
+            color: rgb(25,47,75);
+        }
+        
+        #inner>div>:nth-child(3){
+            margin-top: -20px;
+            font-style: italic;
+            color: rgb(132,135,137);
+        }
+        
+        button{
+            padding: 10px 30px ;
+            margin-top: 20px;
+            font-size: 20px;
+            color: rgb(58,141,255);
+            border: 1px solid rgb(58,141,255);
+            background-color: transparent;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        button:hover{
+            background-color: rgb(120, 25, 209);
+        }
+        #inner>div>:nth-child(4){
+            color:rgb(155,156,158);
+            margin-top: 40px;
+        }
+        #inner>div:nth-child(1)>h2{
+            color: rgb(8,170,120);
+        }
+        #inner>div:nth-child(2)>h2{
+            color: rgb(242,126,66);
+        }
+        #inner>div:nth-child(3)>h2{
+            color: rgb(66,148,242);
+        }
+
+        @media all and (min-width:480px) and (max-width:720px){
+            #inner{
+            display: grid;
+            margin: auto;
+            margin-top: 70px;
+            width: 60%;
+            text-align: center;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(2,auto);
+            gap: 20px;
+        }
+        }
+
+        @media all and (min-width:320px) and (max-width:479px){
+            #inner{
+            display: grid;
+            margin: auto;
+            margin-top: 70px;
+            width: 60%;
+            text-align: center;
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: repeat(3,auto);
+            gap: 20px;
+        }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <h1>Choose a plan that right for
+            your business
+        </h1>
+        <p>We collect reviews from our users so you can get an honest opinion of what an
+            experience with our website are really like!
+        </p>
+    </div>
+    <div id="inner">
+        <div>
+            <p>Starter Plan</p>
+            <h2>Free</h2>
+            <p>per month</p>
+            <p>We collect reviews from our
+                users so you can get an honest
+                opinion of what an experience
+                with our website.
+            </p>
+            <button>Start Now</button>
+        </div>
+        <div>
+            <p>Business Plan</p>
+            <h2>$39</h2>
+            <p>per month</p>
+            <p>We collect reviews from our
+                users so you can get an honest
+                opinion of what an experience
+                with our website.
+            </p>
+            <button>Start Now</button>
+        </div>
+        <div>
+            <p>Premium Plan</p>
+            <h2>$59</h2>
+            <p>per month</p>
+            <p>We collect reviews from our
+                users so you can get an honest
+                opinion of what an experience
+                with our website.
+            </p>
+            <button>Start Now</button>
+        </div>
+    </div>
+</body>
+</html>
